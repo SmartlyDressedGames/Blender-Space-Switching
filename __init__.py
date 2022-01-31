@@ -21,8 +21,8 @@ bl_info = {
 	"name": "Space Switching",
 	"description": "Build temporary armatures while animating.",
 	"author": "Nelson Sexton",
-	"version": (1, 0, 0),
-	"blender": (2, 92, 0),
+	"version": (1, 0, 1),
+	"blender": (3, 0, 1),
 	"location": "View3D > Pose Mode > Pose > Space Switching",
 	"category": "Animation",
 }
@@ -386,7 +386,9 @@ def _space_switch(context, src_pose_bones, dest_pose_bone, frames = None):
 
 		# Temporary bone copies viewport display properties because the source bone is hidden.
 		temp_pose_bone.custom_shape = src_pose_bone.custom_shape
-		temp_pose_bone.custom_shape_scale = src_pose_bone.custom_shape_scale
+		temp_pose_bone.custom_shape_translation = src_pose_bone.custom_shape_translation
+		temp_pose_bone.custom_shape_rotation_euler = src_pose_bone.custom_shape_rotation_euler
+		temp_pose_bone.custom_shape_scale_xyz = src_pose_bone.custom_shape_scale_xyz
 		temp_pose_bone.custom_shape_transform = src_pose_bone.custom_shape_transform
 		temp_pose_bone.use_custom_shape_bone_size = src_pose_bone.use_custom_shape_bone_size # "Scale to Bone Length"
 		temp_bone.show_wire = src_pose_bone.bone.show_wire # "Wireframe"

@@ -6,10 +6,9 @@ Not perfect, but potentially useful for some people.
 
 ## Installation
 
-1. Download the newest release zip from https://github.com/SmartlyDressedGames/Blender-Space-Switching/releases
-2. Rename the zip to "space_switching.zip" because Blender will not work with the version number in the file name
-3. In Blender navgiate to Edit > Preferences > Add-ons > Install...
-4. Select the zip to install
+1. Download the newest space_switching.zip from https://github.com/SmartlyDressedGames/Blender-Space-Switching/releases
+2. In Blender navgiate to Edit > Preferences > Add-ons > Install...
+3. Select the zip to install
 
 ## History
 
