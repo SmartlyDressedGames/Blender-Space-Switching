@@ -22,7 +22,7 @@ bl_info = {
 	"description": "Build temporary armatures while animating.",
 	"author": "Nelson Sexton",
 	"version": (1, 0, 1),
-	"blender": (3, 0, 1),
+	"blender": (4, 0, 2),
 	"location": "View3D > Pose Mode > Pose > Space Switching",
 	"category": "Animation",
 }
