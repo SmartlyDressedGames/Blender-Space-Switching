@@ -1,0 +1,7 @@
+# Nelson 2024-02-22: the default VS Code Python language server is warning about
+# Blender's bpy.props.* type annotations. The discussion about it in this GitHub
+# issue even mentions the Blender API:
+# https://github.com/microsoft/pylance-release/issues/5457
+# As recommended by comments in the issue, we turn off the related warning.
+[tool.pyright]
+reportInvalidTypeForm = false
