@@ -777,7 +777,13 @@ class SPACE_SWITCHING_OT_selection_to_active(Operator):
 		because active is excluded from bones to switch.
 		"""
 		if context.mode == 'POSE':
+			active_pose_bone = context.active_pose_bone
 			for pose_bone in context.selected_pose_bones:
+				if pose_bone == active_pose_bone:
+					# Nelson 2024-02-22: Allow active pose bone to have constraints because
+					# it's not modified by the _space_switch function. For example, constrainting
+					# a weapon handle bone (selected) to an already-constrained arm bone (active).
+					continue
 				if len(pose_bone.constraints) > 0:
 					# Already constrained so do not add another constraint.
 					return False
